@@ -1,0 +1,126 @@
+/* GTA VI trophy guide: a Vice City dusk palette of our own. System fonts only, no external files. */
+:root {
+  --bg: #12081f;
+  --panel: #1d1030;
+  --panel2: #251640;
+  --ink: #f4eefc;
+  --muted: #c3b3dd;
+  --line: #3d2766;
+  --pink: #ff5da2;
+  --teal: #2ee6c8;
+  --gold: #ffc93c;
+  --silver: #cfd6e4;
+  --bronze: #e0955a;
+  --danger: #ff7a59;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+a { color: var(--teal); }
+h1 { font-size: 2.2rem; margin: 0.1em 0 0.3em; letter-spacing: -0.02em; }
+h2 { font-size: 1.25rem; margin: 0 0 0.5em; }
+.hero {
+  display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between;
+  padding: 28px 24px 20px;
+  background: linear-gradient(135deg, #2a0f4d 0%, #12081f 55%, #0d2b2b 100%);
+  border-bottom: 3px solid var(--pink);
+}
+.hero-text { max-width: 640px; }
+.kicker { color: var(--teal); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.8rem; margin: 0; }
+.lede { color: var(--muted); margin: 0; }
+.progress-card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px 20px; min-width: 280px; max-width: 360px; flex: 1;
+}
+.big { font-size: 2rem; margin: 0; font-weight: 700; }
+.big .of { font-size: 1rem; color: var(--muted); font-weight: 400; }
+.bar { height: 12px; background: #0c0616; border-radius: 6px; overflow: hidden; margin: 10px 0; border: 1px solid var(--line); }
+.fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--pink), var(--gold)); transition: width 0.3s; }
+.counts { margin: 4px 0; color: var(--muted); font-size: 0.9rem; }
+.eta { margin: 8px 0 0; font-size: 0.85rem; color: var(--muted); }
+section, main, footer { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.warning {
+  margin-top: 20px; background: #3a1408; border: 1px solid var(--danger);
+  border-left: 6px solid var(--danger); border-radius: 8px; padding: 14px 18px;
+}
+.warning p { margin: 0.4em 0; }
+.miss { color: var(--danger); font-weight: 700; }
+.roadmap { margin-top: 24px; }
+.stages { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+.stages li { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.stages h3 { margin: 0 0 4px; font-size: 1rem; }
+.stages h3 .n { color: var(--pink); margin-right: 6px; }
+.stages p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+.stages .tcount { color: var(--teal); font-weight: 600; }
+.controls { margin-top: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 6px 0; }
+.search input { min-width: 240px; }
+input[type="search"], input[type="text"], select {
+  background: #0c0616; color: var(--ink); border: 1px solid var(--line);
+  border-radius: 6px; padding: 7px 10px; font: inherit;
+}
+.check { display: flex; gap: 6px; align-items: center; }
+.check .hint { color: var(--muted); font-size: 0.85rem; }
+.chips button {
+  background: var(--panel2); color: var(--ink); border: 1px solid var(--line);
+  border-radius: 999px; padding: 6px 14px; font: inherit; cursor: pointer;
+}
+.chips button[aria-pressed="true"] { background: var(--pink); border-color: var(--pink); color: #fff; font-weight: 700; }
+button { font: inherit; cursor: pointer; }
+.actions button, .import {
+  background: var(--teal); color: #06231d; border: 0; border-radius: 6px;
+  padding: 8px 14px; font-weight: 700;
+}
+.actions button#reset { background: transparent; color: var(--muted); border: 1px solid var(--line); font-weight: 400; }
+.import input { display: none; }
+.status { color: var(--teal); font-size: 0.9rem; min-height: 1.2em; }
+.result-line { color: var(--muted); margin: 18px 0 10px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px; padding-bottom: 8px; }
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 14px 16px; position: relative;
+}
+.card.earned { border-color: var(--teal); }
+.card.earned::after {
+  content: "EARNED"; position: absolute; top: 12px; right: 12px;
+  color: var(--teal); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+}
+.card.focused { outline: 3px solid var(--gold); }
+.card h3 { margin: 0 0 4px; font-size: 1.05rem; padding-right: 70px; }
+.card .desc { color: var(--muted); font-style: italic; margin: 0 0 8px; }
+.card .guide { margin: 0 0 8px; }
+.card .src { margin: 0; color: var(--muted); font-size: 0.8rem; }
+.card .target { margin: 0 0 8px; color: var(--gold); font-size: 0.9rem; font-weight: 600; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+.tag {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  border-radius: 4px; padding: 2px 7px; background: var(--panel2); color: var(--muted);
+}
+.tag.platinum { background: #3a2f6b; color: #d9ccff; }
+.tag.gold { background: #4d3a08; color: var(--gold); }
+.tag.silver { background: #2c3444; color: var(--silver); }
+.tag.bronze { background: #4a2c14; color: var(--bronze); }
+.tag.missable { background: #4d1503; color: var(--danger); }
+.tag.kind-story { background: #3d0f2e; color: var(--pink); }
+.tag.kind-collectible { background: #0b3d33; color: var(--teal); }
+.tag.kind-crime { background: #3d0f0f; color: #ff9a7a; }
+.tick { display: flex; gap: 8px; align-items: flex-start; margin: 0 0 8px; font-weight: 600; }
+.tick input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--teal); }
+.hidden-card { text-align: center; padding: 26px 16px; }
+.hidden-card .lock { font-size: 1.6rem; }
+.hidden-card p { color: var(--muted); }
+.empty { color: var(--muted); padding: 24px 0; }
+.sources { margin-top: 32px; }
+.sources li { margin: 0.4em 0; color: var(--muted); }
+.sources li strong { color: var(--ink); }
+footer { color: var(--muted); font-size: 0.85rem; padding-bottom: 28px; }
+footer p { border-top: 1px solid var(--line); padding-top: 14px; }
+@media (max-width: 640px) {
+  h1 { font-size: 1.7rem; }
+  .hero, section, main, footer { padding-left: 14px; padding-right: 14px; }
+}

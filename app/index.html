@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide &amp; Tracker — 55 PS5 Trophies</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies: official names, descriptions and grades, a roadmap to the platinum, missable warnings, and a checklist saved in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Leonida</p>
+    <h1>Trophy Guide &amp; Tracker</h1>
+    <p class="lede">All 55 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze. Official names, descriptions and grades, a roadmap to the platinum, and a checklist that lives in your browser. Works fully offline.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="big"><span id="earnedCount">0</span><span class="of"> / 55 earned</span></p>
+    <div class="bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="bar"><div class="fill" id="barFill"></div></div>
+    <p class="counts" id="gradeCounts"></p>
+    <p class="eta">Platinum estimate: around 200 hours. No online trophies, no difficulty trophies, no mission medals — long, not hard.</p>
+  </div>
+</header>
+
+<section class="warning" id="saveWarning">
+  <h2>Save before every chapter</h2>
+  <p>GTA VI has <strong>no mission replay</strong> and no New Game Plus. Keep a manual save at the start of every chapter and one before the final mission.</p>
+  <p><strong>1 confirmed missable:</strong> <span class="miss">Positive Mental Attitude</span> — Lucia&rsquo;s balcony meditation in Chapter 1 counts toward it and disappears after that chapter. Do it during Chapter 1. (Source: Output Lag trophy guide.)</p>
+</section>
+
+<section class="roadmap" id="roadmap">
+  <h2>Roadmap to the platinum</h2>
+  <ol class="stages" id="stages"></ol>
+</section>
+
+<section class="controls" aria-label="Tracker controls">
+  <div class="row">
+    <label class="search">Search <input id="search" type="search" placeholder="Trophy name or keyword…" autocomplete="off"></label>
+    <label>Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="check"><input id="earnedOnly" type="checkbox"> Earned only</label>
+    <label class="check spoiler"><input id="spoiler" type="checkbox" checked> Spoiler-free mode <span class="hint">hides story trophies until earned</span></label>
+  </div>
+  <div class="row chips" id="kindChips" role="group" aria-label="Filter by kind"></div>
+  <div class="row actions">
+    <button id="export" type="button">Export progress (.json)</button>
+    <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    <button id="reset" type="button">Reset checklist</button>
+    <span class="status" id="status" role="status"></span>
+  </div>
+</section>
+
+<main>
+  <p class="result-line" id="resultLine"></p>
+  <div class="grid" id="grid"></div>
+</main>
+
+<section class="sources">
+  <h2>Sources &amp; notes</h2>
+  <ul>
+    <li>Trophy names, descriptions and grades are as PlayStation publishes them, as listed by <strong>Exophase</strong> and <strong>PSNProfiles</strong> at launch (19 Nov 2026). 28 of the 55 are hidden on PlayStation until earned, including every story trophy.</li>
+    <li>Missable warning and the no-mission-replay rule: <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List</a>. Five trophies have no confirmed unlock method at launch; their guides say so and only use the official description as a hint.</li>
+    <li>Cross-checks: <a href="https://press-start.com.au/news/2026/11/18/gta-6-trophy-list/">Press Start — full trophy list</a> · <a href="https://www.techtroduce.com/gta-6-ps5-trophy-list-100-percent-completion/">TechTroduce — PS5 trophy list</a> · <a href="https://leonidahub.org/en/news/gta-vi-reportedly-has-55-ps5-trophies-platinum-included-as-xbox-and-playstation-data-line-up">Leonida Hub — 55 trophies report</a> · <a href="https://www.gtavicecityhub.com/achievements">GTA Vice City Hub — achievements</a></li>
+    <li>Every guide on this page is original writing for this entry, built from the official description of its trophy. No Rockstar logo, artwork or game screenshot is used; the look is our own.</li>
+    <li>Your checklist is stored only in this browser (localStorage). Export it to a file to back it up or move it to another browser.</li>
+  </ul>
+</section>
+
+<footer><p>GTA VI Trophy Guide &amp; Tracker — an unofficial fan guide. Grand Theft Auto and Rockstar Games are trademarks of their owners. Built as an entry for <a href="https://make.fun/bounty/gta6-trophy-guide-01">make.fun&rsquo;s GTA 6 trophy guide bounty</a>.</p></footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

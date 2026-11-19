@@ -1,0 +1,6 @@
+[
+  { "file": "1-cover.jpg", "path": "/?demo=1", "viewport": { "width": 1280, "height": 800 }, "via": "CDP Page.captureScreenshot, Chrome 159 headless" },
+  { "file": "2-roadmap.jpg", "path": "/?demo=1&roadmap=1", "viewport": { "width": 1280, "height": 800 }, "via": "CDP Page.captureScreenshot, Chrome 159 headless" },
+  { "file": "3-guide.jpg", "path": "/?spoiler=off&focus=28", "viewport": { "width": 1280, "height": 800 }, "via": "CDP Page.captureScreenshot, Chrome 159 headless" },
+  { "file": "4-spoiler.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 }, "via": "CDP Page.captureScreenshot, Chrome 159 headless" }
+]
