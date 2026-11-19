@@ -1,4 +1,5 @@
-/* GTA VI trophy guide: a Vice City dusk palette of our own. System fonts only, no external files. */
+/* GTA VI trophy guide — a Vice City dusk palette of our own. System fonts only,
+   no external files, no web fonts: the page must work with the network off. */
 :root {
   --bg: #12081f;
   --panel: #1d1030;
@@ -24,6 +25,8 @@ body {
 a { color: var(--teal); }
 h1 { font-size: 2.2rem; margin: 0.1em 0 0.3em; letter-spacing: -0.02em; }
 h2 { font-size: 1.25rem; margin: 0 0 0.5em; }
+
+/* hero + progress card */
 .hero {
   display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between;
   padding: 28px 24px 20px;
@@ -43,13 +46,21 @@ h2 { font-size: 1.25rem; margin: 0 0 0.5em; }
 .fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--pink), var(--gold)); transition: width 0.3s; }
 .counts { margin: 4px 0; color: var(--muted); font-size: 0.9rem; }
 .eta { margin: 8px 0 0; font-size: 0.85rem; color: var(--muted); }
+
+/* page frame */
 section, main, footer { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+/* save warning */
 .warning {
   margin-top: 20px; background: #3a1408; border: 1px solid var(--danger);
   border-left: 6px solid var(--danger); border-radius: 8px; padding: 14px 18px;
 }
 .warning p { margin: 0.4em 0; }
 .miss { color: var(--danger); font-weight: 700; }
+.unconfirmed-note { color: var(--muted); font-size: 0.92rem; }
+.unconfirmed-note strong { color: var(--ink); }
+
+/* roadmap */
 .roadmap { margin-top: 24px; }
 .stages { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
 .stages li { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
@@ -57,6 +68,8 @@ section, main, footer { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 .stages h3 .n { color: var(--pink); margin-right: 6px; }
 .stages p { margin: 0; color: var(--muted); font-size: 0.92rem; }
 .stages .tcount { color: var(--teal); font-weight: 600; }
+
+/* controls */
 .controls { margin-top: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
 .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 6px 0; }
 .search input { min-width: 240px; }
@@ -80,6 +93,8 @@ button { font: inherit; cursor: pointer; }
 .import input { display: none; }
 .status { color: var(--teal); font-size: 0.9rem; min-height: 1.2em; }
 .result-line { color: var(--muted); margin: 18px 0 10px; }
+
+/* trophy grid + cards */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px; padding-bottom: 8px; }
 .card {
   background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
@@ -115,11 +130,20 @@ button { font: inherit; cursor: pointer; }
 .hidden-card .lock { font-size: 1.6rem; }
 .hidden-card p { color: var(--muted); }
 .empty { color: var(--muted); padding: 24px 0; }
+
+/* sources + footer */
 .sources { margin-top: 32px; }
 .sources li { margin: 0.4em 0; color: var(--muted); }
 .sources li strong { color: var(--ink); }
 footer { color: var(--muted); font-size: 0.85rem; padding-bottom: 28px; }
 footer p { border-top: 1px solid var(--line); padding-top: 14px; }
+
+/* keyboard focus */
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible {
+  outline: 2px solid var(--teal); outline-offset: 2px;
+}
+
+/* small screens */
 @media (max-width: 640px) {
   h1 { font-size: 1.7rem; }
   .hero, section, main, footer { padding-left: 14px; padding-right: 14px; }

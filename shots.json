@@ -1,6 +1,30 @@
 [
-  { "file": "1-cover.jpg", "path": "/?demo=1", "viewport": { "width": 1280, "height": 800 }, "via": "CDP Page.captureScreenshot, Chrome 159 headless" },
-  { "file": "2-roadmap.jpg", "path": "/?demo=1&roadmap=1", "viewport": { "width": 1280, "height": 800 }, "via": "CDP Page.captureScreenshot, Chrome 159 headless" },
-  { "file": "3-guide.jpg", "path": "/?spoiler=off&focus=28", "viewport": { "width": 1280, "height": 800 }, "via": "CDP Page.captureScreenshot, Chrome 159 headless" },
-  { "file": "4-spoiler.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 }, "via": "CDP Page.captureScreenshot, Chrome 159 headless" }
+  {
+    "file": "1-cover.jpg",
+    "path": "/?demo=1",
+    "shows": "Hero, progress card and the first trophy cards with demo ticks",
+    "via": "CDP Page.captureScreenshot, Chrome 159 headless",
+    "viewport": { "width": 1280, "height": 800 }
+  },
+  {
+    "file": "2-roadmap.jpg",
+    "path": "/?demo=1&roadmap=1",
+    "shows": "The six-stage roadmap to the platinum",
+    "via": "CDP Page.captureScreenshot, Chrome 159 headless",
+    "viewport": { "width": 1280, "height": 800 }
+  },
+  {
+    "file": "3-guide.jpg",
+    "path": "/?spoiler=off&focus=28",
+    "shows": "A trophy card in full: tags, target, guide and source",
+    "via": "CDP Page.captureScreenshot, Chrome 159 headless",
+    "viewport": { "width": 1280, "height": 800 }
+  },
+  {
+    "file": "4-spoiler.jpg",
+    "path": "/",
+    "shows": "Spoiler-free mode on: story trophies hidden behind lock cards",
+    "via": "CDP Page.captureScreenshot, Chrome 159 headless",
+    "viewport": { "width": 1280, "height": 800 }
+  }
 ]
